@@ -1,0 +1,72 @@
+\documentclass[10pt,letterpaper]{article}
+
+% --- Soporte de Idioma y Codificación ---
+\usepackage[utf8]{inputenc}       
+\usepackage[T1]{fontenc}          
+\usepackage[spanish,es-tabla]{babel} 
+\addto\captionsspanish{\renewcommand{\abstractname}{Abstract}} %para que diga Abstract en vez de Resumen
+
+% --- Símbolos Matemáticos Avanzados ---
+\usepackage{amsmath}              
+\usepackage{amsfonts}             
+\usepackage{amssymb}              
+\usepackage{amsthm}               
+
+% --- Tablas Mejoradas ---
+\usepackage{booktabs}             
+\usepackage{array}                
+\usepackage{multirow}             
+
+% --- Gestión de Márgenes ---
+\usepackage[margin=1in]{geometry} 
+
+% --- Gestión de Bibliografía con Natbib (Perfecto para tu BibTeX) ---
+\usepackage[numbers,sort&compress]{natbib} % Citas numéricas agrupadas automáticamente
+
+
+% --- Datos del Documento ---
+\title{Estudio de clasificación de uso excesivo de internet como un problema de adicción por medio de parámetros fácilmente medibles}
+\author{Rafael Santiago Bedoya, Jose Ricardo Florez, \\ Wilson Panesso, Angie Giselle Perez}
+\date{}                     % Inserta de forma automática la fecha actual en español
+
+% =========================================================================
+\begin{document}
+
+\maketitle                        % Genera el título automáticamente
+
+\begin{abstract}
+Este trabajo presenta el análisis del caso de uso excesivo del internet en niños y adolescentes como un caso de adicción, realizamos un recorrido sobre los posibles cambios comportamentales asociados tales como parámetros de aptitud física, rendimiento físico y patrones de sueño.Aal igual que factores de riesgo que pueden influir en la tendencia a caer en adicción. De esta forma este estudio busca proponer una clasificación preliminar basada en patrones fácilmente observables para aplicar de esta manera los estudios clínicos pertinentes para identificar la adicción.
+\end{abstract}
+
+%\tableofcontents
+
+\section{Introducción}
+Aqui se escribe la introduccion
+
+\section{Objetivos}
+\begin{itemize}
+\item Objetivo 1
+\item Objetivo 2
+
+\end{itemize}
+
+\section{Estado del arte}
+Esto es lo que tenemos que escribir, voy a citar los articulos para que me genere la bibliografia, solo van a aparecer en la bibliografia los articulos que fueron citados  \cite{lifestyle_changes, mobile_addiction, redes_sociales_gallegos, eficacia_academica, hurtado2024impactos}. Tambien añadire una tabla sin nada como referencia
+
+\begin{table}[h]
+\centering
+\begin{tabular}{ccc}  %la cantidad de c, es la cantidad de columnas, 4 columnas seria cccc
+\hline %añade linea horizontal
+\textbf{Columna 1} & \textbf{Columna 2} & \textbf{Columna 3} \\
+\hline
+Dato A & Ecuación $x^2$ & Texto 1 \\  %agregar cada fila, separada por el simbolo &
+Dato B & Símbolo $\alpha$ & Texto 2 \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+\bibliographystyle{unsrtnat} % Ordena las referencias por aparición (1, 2, 3...)
+\bibliography{archivo_bibtex} 
+
+\end{document}
