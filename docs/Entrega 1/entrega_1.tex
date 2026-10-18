@@ -23,6 +23,30 @@
 % --- Gestión de Bibliografía con Natbib (Perfecto para tu BibTeX) ---
 \usepackage[numbers,sort&compress]{natbib} % Citas numéricas agrupadas automáticamente
 
+%landscape
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds}
+\tikzset{
+  base/.style={rectangle, rounded corners=3pt, align=left, font=\footnotesize,
+               inner sep=5pt, text width=5.5cm, minimum height=2.3cm, anchor=north},
+  efecto/.style={base, draw=efecto, line width=0.9pt, fill=white},
+  efsec/.style={base, draw=efecto!60, fill=efectosoft, minimum height=1.5cm, text width=7.3cm},
+  causa/.style={base, draw=causa, line width=0.9pt, fill=white, minimum height=3.2cm},
+  problema/.style={rectangle, rounded corners=4pt, fill=tronco, text=white,
+               align=center, font=\small\bfseries, text width=23.4cm, inner sep=9pt},
+  flecha/.style={-{Stealth[length=2.2mm]}, line width=0.7pt, draw=gray!70},
+  titulo/.style={font=\footnotesize\bfseries}
+}
+% ---------- Colores ----------
+\definecolor{efecto}{HTML}{B4462F}
+\definecolor{efectosoft}{HTML}{F8E7E2}
+\definecolor{causa}{HTML}{1F6F5C}
+\definecolor{causasoft}{HTML}{E2F1EC}
+\definecolor{tronco}{HTML}{1C2F3B}
+\definecolor{ambar}{HTML}{FBF0D9}
+
 
 % --- Datos del Documento ---
 \title{Estudio de clasificación de uso excesivo de internet como un problema de adicción por medio de parámetros fácilmente medibles}
@@ -52,6 +76,112 @@ Aqui se escribe la introduccion
 
 \section{Estado del arte}
 Esto es lo que tenemos que escribir, voy a citar los articulos para que me genere la bibliografia, solo van a aparecer en la bibliografia los articulos que fueron citados  \cite{lifestyle_changes, mobile_addiction, redes_sociales_gallegos, eficacia_academica, hurtado2024impactos}. Tambien añadire una tabla sin nada como referencia
+
+\begin{landscape}
+\thispagestyle{empty}
+\begin{center}
+{\large\bfseries Arbol de problemas}\\[4pt]
+
+\vfill
+\begin{center} % LINEA PARA CENTRAR EL ARBOL
+
+\resizebox{\linewidth}{!}{ %RESIZE PARA QUE QUEPA
+
+\begin{tikzpicture}[node distance=0.45cm and 0.35cm]
+ 
+% ----- Problema central -----
+\node[problema] (P) {PROBLEMA CENTRAL\\[3pt]
+\normalfont\small Deteccion tardia del uso problematico de internet (UPI) en ninos y adolescentes,
+porque su medicion depende de evaluaciones clinicas complejas y poco accesibles, y no se
+aprovechan indicadores fisicos de bajo costo como senal temprana.};
+ 
+% ----- Efectos directos -----
+\node[efecto, above=1.0cm of P.north west, anchor=south west, xshift=0.1cm] (E1)
+  {\textcolor{efecto}{\textbf{E1. Intervencion tardia}}
+   \begin{itemize}
+     \item Habitos digitales nocivos se consolidan antes de detectarse
+     \item Se actua cuando ya hay sintomas clinicos
+   \end{itemize}};
+\node[efecto, right=of E1.north east, anchor=north west] (E2)
+  {\textcolor{efecto}{\textbf{E2. Deterioro de la salud mental}}
+   \begin{itemize}
+     \item Mayor prevalencia de depresion y ansiedad
+     \item Alteraciones del sueno
+   \end{itemize}};
+\node[efecto, right=of E2.north east, anchor=north west] (E3)
+  {\textcolor{efecto}{\textbf{E3. Deterioro de la salud fisica}}
+   \begin{itemize}
+     \item Sedentarismo, mala postura, dieta irregular
+     \item Menor aptitud cardiovascular
+   \end{itemize}};
+\node[efecto, right=of E3.north east, anchor=north west] (E4)
+  {\textcolor{efecto}{\textbf{E4. Casos subdiagnosticados}}
+   \begin{itemize}
+     \item UPI invisible detras de otros diagnosticos
+     \item Sin linea base de prevalencia real
+   \end{itemize}};
+ 
+% ----- Efectos secundarios -----
+\node[efsec, above=0.9cm of E1.north west, anchor=south west, xshift=0cm] (S1)
+  {\textbf{Mayores costos} para familias y sistema de salud; politicas publicas sin datos para focalizar};
+\node[efsec, right=0.4cm of S1.north east, anchor=north west] (S2)
+  {\textbf{Bajo desempeno escolar y social}: menor funcionamiento global (CGAS), aislamiento};
+\node[efsec, right=0.4cm of S2.north east, anchor=north west] (S3)
+  {\textbf{Mas inequidad}: familias sin acceso a especialistas quedan sin diagnostico};
+ 
+% ----- Causas -----
+\node[causa, below=1.0cm of P.south west, anchor=north west, xshift=0.1cm] (C1)
+  {\textcolor{causa}{\textbf{C1. Dependencia de evaluaciones clinicas especializadas}}
+   \begin{itemize}
+     \item PCIAT (20 items) requiere aplicacion profesional
+     \item Escasez de especialistas en salud mental infantil
+     \item Barreras de acceso, culturales y linguisticas
+   \end{itemize}};
+\node[causa, right=of C1.north east, anchor=north west] (C2)
+  {\textcolor{causa}{\textbf{C2. El UPI no se mide directamente}}
+   \begin{itemize}
+     \item Se infiere por sus consecuencias (depresion, ansiedad)
+     \item Sin tamizaje en colegios ni atencion primaria
+     \item Baja conciencia de padres sobre senales de alerta
+   \end{itemize}};
+\node[causa, right=of C2.north east, anchor=north west] (C3)
+  {\textcolor{causa}{\textbf{C3. Subutilizacion de indicadores fisicos accesibles}}
+   \begin{itemize}
+     \item FitnessGram, bioimpedancia y actigrafia no se conectan con la salud digital
+     \item No hay modelos que relacionen actividad, sueno y composicion corporal con el UPI
+   \end{itemize}};
+\node[causa, right=of C3.north east, anchor=north west] (C4)
+  {\textcolor{causa}{\textbf{C4. Datos incompletos y heterogeneos}}
+   \begin{itemize}
+     \item Muchas mediciones faltantes
+     \item sii ausente en parte del entrenamiento
+     \item Actigrafia solo en un subconjunto (parquet vs csv)
+     \item Clases desbalanceadas
+   \end{itemize}};
+ 
+% ----- Flechas: causas -> problema -> efectos -> secundarios -----
+\foreach \c in {C1,C2,C3,C4} \draw[flecha, draw=causa] (\c.north) -- (\c.north |- P.south);
+\foreach \e in {E1,E2,E3,E4} \draw[flecha, draw=efecto] (\e.south |- P.north) -- (\e.south);
+\draw[flecha, draw=efecto!70] (E1.north) -- (S1.south);
+\draw[flecha, draw=efecto!70] (E2.north) -- (S1.south);
+\draw[flecha, draw=efecto!70] (E4.north) -- (S3.south);
+\draw[flecha, draw=efecto!70] (E2.north) -- (S2.south);
+\draw[flecha, draw=efecto!70] (E3.north) -- (S2.south);
+ 
+% ----- Etiquetas laterales -----
+\node[titulo, text=efecto, rotate=90, left=0.15cm of S1.west, anchor=south] {EFECTOS};
+\node[titulo, text=causa, rotate=90, left=0.15cm of C1.west, anchor=south] {CAUSAS};
+ 
+\end{tikzpicture}
+
+} %CIERRE RESIZE
+
+\end{center}
+
+\end{center}
+\vfill
+
+\end{landscape}
 
 \begin{table}[h]
 \centering

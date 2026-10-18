@@ -1,0 +1,216 @@
+% ============================================================
+% Arbol de problemas - Uso problematico de internet (UPI)
+% Proyecto de Innovacion 1 - Fase 1 CRISP-ML(Q)
+% Compilar en Overleaf con pdfLaTeX
+% ============================================================
+\documentclass[10pt,letterpaper]{article}
+ 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{lmodern}
+\usepackage[margin=2.2cm]{geometry}
+\usepackage{pdflscape}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit,backgrounds}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+ 
+% ---------- Colores ----------
+\definecolor{efecto}{HTML}{B4462F}
+\definecolor{efectosoft}{HTML}{F8E7E2}
+\definecolor{causa}{HTML}{1F6F5C}
+\definecolor{causasoft}{HTML}{E2F1EC}
+\definecolor{tronco}{HTML}{1C2F3B}
+\definecolor{ambar}{HTML}{FBF0D9}
+ 
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt,parsep=0pt}
+ 
+% ---------- Estilos TikZ ----------
+\tikzset{
+  base/.style={rectangle, rounded corners=3pt, align=left, font=\footnotesize,
+               inner sep=5pt, text width=5.5cm, minimum height=2.3cm, anchor=north},
+  efecto/.style={base, draw=efecto, line width=0.9pt, fill=white},
+  efsec/.style={base, draw=efecto!60, fill=efectosoft, minimum height=1.5cm, text width=7.3cm},
+  causa/.style={base, draw=causa, line width=0.9pt, fill=white, minimum height=3.2cm},
+  problema/.style={rectangle, rounded corners=4pt, fill=tronco, text=white,
+               align=center, font=\small\bfseries, text width=23.4cm, inner sep=9pt},
+  flecha/.style={-{Stealth[length=2.2mm]}, line width=0.7pt, draw=gray!70},
+  titulo/.style={font=\footnotesize\bfseries}
+}
+ 
+\title{\textbf{Proyecto de Innovacion 1 \\ \small Fase 1 CRISP-ML(Q): comprension del negocio y los datos}\\[2pt]
+\large Uso problematico de internet en ninos y adolescentes}
+\author{Rafael Santiago Bedoya, Jose Ricardo Florez \\ Wilson Panesso, Angie Giselle Perez}
+\date{}
+ 
+\begin{document}
+\maketitle
+ 
+\section*{Contexto}
+El reto propuesto por Child Mind Institute y Healthy Brain Network (HBN) busca predecir el
+\emph{Severity Impairment Index} (sii), medida estandar del uso problematico de internet (UPI),
+a partir de datos de actividad y aptitud fisica de jovenes entre 5 y 22 anos. El sii se deriva
+del cuestionario PCIAT: 0 = Ninguno, 1 = Leve, 2 = Moderado, 3 = Severo.
+ 
+% ============================================================
+% ARBOL (pagina horizontal)
+% ============================================================
+\begin{landscape}
+\thispagestyle{empty}
+\begin{center}
+{\large\bfseries Arbol de problemas}\\[4pt]
+\begin{tikzpicture}[node distance=0.45cm and 0.35cm]
+ 
+% ----- Problema central -----
+\node[problema] (P) {PROBLEMA CENTRAL\\[3pt]
+\normalfont\small Deteccion tardia del uso problematico de internet (UPI) en ninos y adolescentes,
+porque su medicion depende de evaluaciones clinicas complejas y poco accesibles, y no se
+aprovechan indicadores fisicos de bajo costo como senal temprana.};
+ 
+% ----- Efectos directos -----
+\node[efecto, above=1.0cm of P.north west, anchor=south west, xshift=0.1cm] (E1)
+  {\textcolor{efecto}{\textbf{E1. Intervencion tardia}}
+   \begin{itemize}
+     \item Habitos digitales nocivos se consolidan antes de detectarse
+     \item Se actua cuando ya hay sintomas clinicos
+   \end{itemize}};
+\node[efecto, right=of E1.north east, anchor=north west] (E2)
+  {\textcolor{efecto}{\textbf{E2. Deterioro de la salud mental}}
+   \begin{itemize}
+     \item Mayor prevalencia de depresion y ansiedad
+     \item Alteraciones del sueno
+   \end{itemize}};
+\node[efecto, right=of E2.north east, anchor=north west] (E3)
+  {\textcolor{efecto}{\textbf{E3. Deterioro de la salud fisica}}
+   \begin{itemize}
+     \item Sedentarismo, mala postura, dieta irregular
+     \item Menor aptitud cardiovascular
+   \end{itemize}};
+\node[efecto, right=of E3.north east, anchor=north west] (E4)
+  {\textcolor{efecto}{\textbf{E4. Casos subdiagnosticados}}
+   \begin{itemize}
+     \item UPI invisible detras de otros diagnosticos
+     \item Sin linea base de prevalencia real
+   \end{itemize}};
+ 
+% ----- Efectos secundarios -----
+\node[efsec, above=0.9cm of E1.north west, anchor=south west, xshift=0cm] (S1)
+  {\textbf{Mayores costos} para familias y sistema de salud; politicas publicas sin datos para focalizar};
+\node[efsec, right=0.4cm of S1.north east, anchor=north west] (S2)
+  {\textbf{Bajo desempeno escolar y social}: menor funcionamiento global (CGAS), aislamiento};
+\node[efsec, right=0.4cm of S2.north east, anchor=north west] (S3)
+  {\textbf{Mas inequidad}: familias sin acceso a especialistas quedan sin diagnostico};
+ 
+% ----- Causas -----
+\node[causa, below=1.0cm of P.south west, anchor=north west, xshift=0.1cm] (C1)
+  {\textcolor{causa}{\textbf{C1. Dependencia de evaluaciones clinicas especializadas}}
+   \begin{itemize}
+     \item PCIAT (20 items) requiere aplicacion profesional
+     \item Escasez de especialistas en salud mental infantil
+     \item Barreras de acceso, culturales y linguisticas
+   \end{itemize}};
+\node[causa, right=of C1.north east, anchor=north west] (C2)
+  {\textcolor{causa}{\textbf{C2. El UPI no se mide directamente}}
+   \begin{itemize}
+     \item Se infiere por sus consecuencias (depresion, ansiedad)
+     \item Sin tamizaje en colegios ni atencion primaria
+     \item Baja conciencia de padres sobre senales de alerta
+   \end{itemize}};
+\node[causa, right=of C2.north east, anchor=north west] (C3)
+  {\textcolor{causa}{\textbf{C3. Subutilizacion de indicadores fisicos accesibles}}
+   \begin{itemize}
+     \item FitnessGram, bioimpedancia y actigrafia no se conectan con la salud digital
+     \item No hay modelos que relacionen actividad, sueno y composicion corporal con el UPI
+   \end{itemize}};
+\node[causa, right=of C3.north east, anchor=north west] (C4)
+  {\textcolor{causa}{\textbf{C4. Datos incompletos y heterogeneos}}
+   \begin{itemize}
+     \item Muchas mediciones faltantes
+     \item sii ausente en parte del entrenamiento
+     \item Actigrafia solo en un subconjunto (parquet vs csv)
+     \item Clases desbalanceadas
+   \end{itemize}};
+ 
+% ----- Flechas: causas -> problema -> efectos -> secundarios -----
+\foreach \c in {C1,C2,C3,C4} \draw[flecha, draw=causa] (\c.north) -- (\c.north |- P.south);
+\foreach \e in {E1,E2,E3,E4} \draw[flecha, draw=efecto] (\e.south |- P.north) -- (\e.south);
+\draw[flecha, draw=efecto!70] (E1.north) -- (S1.south);
+\draw[flecha, draw=efecto!70] (E2.north) -- (S1.south);
+\draw[flecha, draw=efecto!70] (E4.north) -- (S3.south);
+\draw[flecha, draw=efecto!70] (E2.north) -- (S2.south);
+\draw[flecha, draw=efecto!70] (E3.north) -- (S2.south);
+ 
+% ----- Etiquetas laterales -----
+\node[titulo, text=efecto, rotate=90, left=0.15cm of S1.west, anchor=south] {EFECTOS};
+\node[titulo, text=causa, rotate=90, left=0.15cm of C1.west, anchor=south] {CAUSAS};
+ 
+\end{tikzpicture}
+\end{center}
+\end{landscape}
+ 
+% ============================================================
+\section{Planteamiento del problema}
+\begin{center}
+\colorbox{ambar}{\parbox{0.94\linewidth}{\vspace{6pt}
+En ninos y adolescentes de 5 a 22 anos, el uso problematico de internet se detecta tarde porque
+su medicion (PCIAT / sii) exige evaluacion clinica especializada, lo que genera barreras de
+acceso para muchas familias. Las medidas de aptitud fisica y actividad (FitnessGram,
+bioimpedancia, actigrafia de muneca, cuestionarios de actividad y sueno) son baratas y faciles
+de tomar, pero no se usan como senal temprana. La consecuencia es una intervencion tardia, con
+mayor deterioro de salud mental y fisica e inequidad en el diagnostico.\vspace{6pt}}}
+\end{center}
+ 
+\section{Datos que respaldan el problema}
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.2cm} >{\raggedright\arraybackslash}p{3.8cm} X}
+\toprule
+\textbf{Dato} & \textbf{Valor} & \textbf{Por que importa} \\
+\midrule
+Muestra HBN & $\sim$5.000 jovenes, 5--22 anos & Base clinica con evaluaciones fisicas y de uso de internet \\
+Conjunto de prueba oculto & $\sim$3.800 instancias & Escala real sobre la que se evalua el modelo \\
+Instrumentos tabulares & 11 & Fuentes heterogeneas que hay que integrar (C3, C4) \\
+Actigrafia & Hasta 30 dias, ventanas de 5 s & Senal objetiva de actividad y sueno, solo en un subconjunto \\
+Train con sii etiquetado$^{*}$ & $\sim$2.700 de $\sim$3.960 & Justifica aprendizaje semi o no supervisado \\
+Distribucion sii$^{*}$ & 0: 58\%, 1: 27\%, 2: 14\%, 3: 1\% & Desbalance fuerte: los casos severos son los mas escasos \\
+\bottomrule
+\end{tabularx}
+\end{center}
+{\footnotesize $^{*}$ Cifras aproximadas de la version publica de la competencia en Kaggle; verificar con \texttt{train.csv}.}
+ 
+\section{Puntos de intervencion para IA}
+\begin{itemize}
+  \item \textbf{C3:} modelo predictivo del sii a partir de datos fisicos, de actividad y sueno (objetivo central del reto).
+  \item \textbf{C4:} imputacion de faltantes, ingenieria de variables desde la actigrafia y manejo del desbalance de clases.
+  \item \textbf{C1 y C2:} el modelo funciona como tamizaje de bajo costo que prioriza quien necesita evaluacion clinica; no reemplaza el diagnostico.
+\end{itemize}
+ 
+\subsection*{Conexion con CRISP-ML(Q)}
+\begin{center}
+\small
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{4.6cm} X}
+\toprule
+\textbf{Fase} & \textbf{Aplicacion en este proyecto} \\
+\midrule
+Comprension del negocio y datos & Este arbol, criterios de exito y verificacion de calidad de datos \\
+Ingenieria de datos & Integrar csv + parquet, imputar faltantes, balancear clases (C4) \\
+Ingenieria y evaluacion del modelo & Metrica ordinal (kappa cuadratico ponderado), robustez y explicabilidad (C3) \\
+Garantia de calidad (riesgos) & Sesgo de muestra unica (Nueva York), fuga de informacion del PCIAT, sobreajuste \\
+\bottomrule
+\end{tabularx}
+\end{center}
+ 
+\section{Reflexion}
+El arbol muestra que el problema no es la falta de un tratamiento, sino la falta de una senal
+temprana y accesible. Las causas C1 y C2 son estructurales y no se resuelven con IA, pero C3 y C4
+si: hay datos fisicos baratos que hoy no se aprovechan y un reto tecnico claro en su calidad.
+Por eso el proyecto se enfoca en un modelo de tamizaje que prediga el sii con indicadores
+fisicos, como apoyo, no sustituto, de la evaluacion clinica.
+ 
+\end{document}
+ 
