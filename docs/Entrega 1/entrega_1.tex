@@ -76,8 +76,8 @@ El reciente fallo contra META argumentando adicción a las redes sociales por pa
 \section{Objetivos}
 \begin{itemize}
 \item Estudiar la caracterización de uso indebido del internet como una adicción de tipo comportamental.
-\item Evaluar las consecuencias estudiadas de la adicción al internet en menores, analizando los diferentes estadíos en escuela primeria, adolescentes e incluso la participación en la entrada a la educación superior.
-\item Analizar los datos de alta medición y definir tanto matemáticamente como desde la psicología que indicadores pueden tener relevancia en la detección preliminar de una posible adicción al internet.
+\item Evaluar las consecuencias estudiadas de la adicción al internet en menores, analizando los diferentes estadíos en escuela primaria, adolescentes e incluso la participación en la entrada a la educación superior.
+\item Analizar los datos de alta medición y definir tanto matemáticamente como desde la psicología qué indicadores pueden tener relevancia en la detección preliminar de una posible adicción al internet.
 \item Desarrollar un clasificador basado en indicadores físicos y comportamentales de fácil medición para la detección preliminar del riesgo de uso problemático de internet en niños y adolescentes, como apoyo a la activación de protocolos de evaluación clínica y atención especializada
 \item Proponer estrategias de uso del clasificador que permita involucrarlo en medios que fomenten una ágil detección, tales como su implementación y uso posible en colegios.
 
@@ -104,19 +104,20 @@ Para iniciar la caracterización del problema a tratar es necesario comprenderlo
 Definida la estructura de investigación iniciamos el proceso ordenado para definir el uso inadecuado del internet en menores.
 
 \subsection{Problemáticas asociadas al uso inadecuado del internet en niños y adolescentes}
-De acuerdo al estudio de 'eficacia académica percibida, crianza, uso de internet y comportamiento en la adolescencia'  \citep{eficacia_academica} el uso intensivo del internet puede contribuir a desarrollar problemas severos durante la adolescencia, tal como disfunciones psicociales.  Existen estudios como el mencionado anteriormente para la comunidad gallega 'Impactos del Uso del Internet en Estudiantes de Media académica'  \citep{hurtado2024impactos} que describen impactos en agresividad, declive en el rendimiento académico y una posible permisividad elevada por parte de su entorno de crianza en menores con un uso intersivo del internet. 
+De acuerdo al estudio de 'eficacia académica percibida, crianza, uso de internet y comportamiento en la adolescencia'  \citep{eficacia_academica} el uso intensivo del internet puede contribuir a desarrollar problemas severos durante la adolescencia, tal como disfunciones psicosociales.  Existen estudios como el mencionado anteriormente para la comunidad gallega 'Impactos del Uso del Internet en Estudiantes de Media académica'  \citep{hurtado2024impactos} que describen impactos en agresividad, declive en el rendimiento académico y una posible permisividad elevada por parte de su entorno de crianza en menores con un uso intersivo del internet. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 Acerca de la problemática relacionada con el uso indebido del internet en niños y adolescentes, la documentación coincide en que existe un cambio conductual en los menores, siendo el punto más documentado la agresividad. Tur-Porcar et al. (2019) \citep{eficacia_academica} encontraron, en una muestra de 762 adolescentes de 12 a 17 años en Valencia, que quienes pasan más horas conectados en su tiempo libre presentan niveles más altos de agresividad reactiva, proactiva, física y verbal. La agresividad proactiva, deliberada e instrumental,  que los autores asocian con más fuerza al espacio virtual, y sugieren una posible relación con la intimidación, incluida la que ocurre dentro de la pareja adolescente (Cava y Buelga, 2018)\citep{eficacia_academica}. Así mismo el estudio 'Problematic internet use: A growing concern for adolescent health and well-being in a digital era'  \citep{dadi2024adolescents} complementan este punto al advertir que el ciberacoso puede desencadenar o agravar problemas de salud mental, sobre todo en adolescentes con predisposición genética.
 En cuanto a la impulsividad, el estudio longitudinal con universitarios de primer año en China \citep{mobile_addiction} muestra que un mayor uso problemático del celular se asocia con más activación de un sistema de impulso, que responde rápido a recompensas inmediatas, y con menor capacidad de control, que permite inhibir respuestas y sostener metas de largo plazo. Por otra parte \citep{dadi2024adolescents} ubica la pérdida de control sobre el uso como rasgo central del uso problemático, y \citep{eficacia_academica} cita a Echeburúa y Corral (2010) para sostener que el uso intensivo puede disminuir la capacidad de autocontrol emocional y conductual. En el terreno del ánimo \citep{dadi2024adolescents} reporta asociaciones con ansiedad, depresión y baja autoestima, aunque se trata de una revisión de literatura y no de datos propios. \citep{eficacia_academica} mide inestabilidad emocional en lugar de depresión clínica, y sus datos muestran que los adolescentes con más uso puntúan más alto en ese indicador. La relación también va en sentido inverso: la falta de control emocional lleva a usar más internet, sobre todo redes sociales, en busca de compañía y alivio de la soledad (Amiel y Sargent, 2004, citados en Tur-Porcar et al., 2019).
 El aislamiento y la soledad son otro punto recurrente. \citep{dadi2024adolescents} sostiene que el uso excesivo puede aumentar la soledad, sobre todo cuando reemplaza la interacción cara a cara, y \citep{eficacia_academica} advierte que puede fomentar el desinterés por otras áreas de la vida y reducir las oportunidades de relaciones más directas (Wilson, Gottfredson y Najaka, 2001, citados en Tur-Porcar et al., 2019). Los adolescentes con uso intensivo también tienen más riesgo de afiliarse a pares rebeldes, aunque no está claro si las redes acercan a esos grupos o si la cercanía con ellos aumenta el uso (Zhu et al., 2015, citados en Tur-Porcar et al., 2019). \citep{dadi2024adolescents} añade que el secreto y el engaño asociados al consumo de contenido sexual en línea pueden deteriorar la intimidad y la confianza. Sobre el sueño y la imagen corporal, el mismo texto vincula ese consumo con peor calidad del sueño y señala que los medios digitales amplifican normas que idealizan ciertos cuerpos, asociadas con dismorfia corporal y trastornos alimentarios. \citep{eficacia_academica} no mide sueño ni imagen corporal, y el estudio universitario solo propone el desplazamiento del sueño como señal de alerta, así que esta parte descansa sobre todo en la revisión de \citep{dadi2024adolescents}.
 En lo académico, \citep{eficacia_academica} encontró que, entre quienes usan internet entre 0 y 3 horas semanales en ocio y quienes usan entre 12 y 98 horas, la autoeficacia académica percibida baja de 7,58 a 6,23 en una escala de 1 a 10, con un efecto que los autores consideran grande. También empeoran la motivación, el ritmo de trabajo y la asistencia a clase, y quienes abandonan tareas que exigen esfuerzo sostenido tienen más riesgo de ausentarse y de no completar la educación básica (Wilson et al., 2001, citados en Tur-Porcar et al., 2019). El uso académico de internet, en cambio, no siempre perjudica: la literatura citada es contradictoria y el resultado depende en parte del fin para el que se usa.
-La exposición a contenido sexual merece atención aparte \citep{dadi2024adolescents} reporta, a partir de los estudios que revisan, que entre 23\% y 63\% de los adolescentes de 7 a 17 años declara haber consumido pornografía, un rango amplio que conviene leer con cautela. Además, el estigma y las normas culturales o religiosas dificultan que muchos pidan ayuda, y los signos suelen ser sutiles. El riesgo es mayor en países de ingresos bajos y medios, donde la base de usuarios jóvenes crece rápido, la regulación es limitada y el uso aumentó durante la pandemia.
+La exposición a contenido sexual merece atención aparte. \citep{dadi2024adolescents} reporta, a partir de los estudios que revisan, que entre 23\% y 63\% de los adolescentes de 7 a 17 años declara haber consumido pornografía, un rango amplio que conviene leer con cautela. Además, el estigma y las normas culturales o religiosas dificultan que muchos pidan ayuda, y los signos suelen ser sutiles. El riesgo es mayor en países de ingresos bajos y medios, donde la base de usuarios jóvenes crece rápido, la regulación es limitada y el uso aumentó durante la pandemia.
 Conviene leer estos resultados con cautela, porque son asociaciones y no causas. \citep{eficacia_academica} reconoce que su diseño transversal no permite inferir causalidad, y el estudio longitudinal no analiza si una mala adaptación lleva a más uso. Tanto \citep{mobile_addiction} como \citep{dadi2024adolescents}, insisten en que el tiempo de uso no basta para hablar de adicción: lo que importa es la pérdida de control y la interferencia con la vida diaria. Los cuadros graves son minoritarios: en videojuegos, en 13 países europeos, 1,6\% de los adolescentes presentaba un trastorno grave y 5,1\% estaba en riesgo (Müller et al., 2015, citados en Tur-Porcar et al., 2019). Por último, los datos sobre universitarios no son directamente aplicables a menores, y todas las fuentes dependen en buena parte de autoinformes.
 En conjunto, el impacto del internet en los menores es real pero no uniforme. El riesgo se concentra en el uso que pierde control y desplaza otras actividades, y se agrava cuando hay poca supervisión familiar, pares que refuerzan conductas de riesgo o malestar emocional previo. Las tres fuentes coinciden en que la respuesta debe ser integral: educación digital, apoyo familiar, detección temprana que vaya más allá del tiempo de uso y evaluación rigurosa de las intervenciones.
 
 \subsection{Descripción de los criterios de adicción}
-Como se estableció anteriormente, el criterio solo de tiempo de exposición no constituye evidencia suficiente para definir una posible adicción al internet, por ello basandose en el experto en adicciones F.M. Bishop \citep{bishopaddictions}, el autor plantea que el desarrollo del comportamiento adictivo no solo se mide por su inversión desmedida en el tiempo, sino también por la reestructuración cognitiva del sujeto. Es decir, cuando la persona asume que la actividad es un requisito indispensable para su equilibrio y de esta manera cualquier privación interrumpe directamente su capacidad de funcionamiento cotidiano.
+Como se estableció anteriormente, el criterio solo de tiempo de exposición no constituye evidencia suficiente para definir una posible adicción al internet, por ello basándose en el experto en adicciones F.M. Bishop \citep{bishopaddictions}, el autor plantea que el desarrollo del comportamiento adictivo no solo se mide por su inversión desmedida en el tiempo, sino también por la reestructuración cognitiva del sujeto. Es decir, cuando la persona asume que la actividad es un requisito indispensable para su equilibrio y de esta manera cualquier privación interrumpe directamente su capacidad de funcionamiento cotidiano.
 
 Por lo cual es posible sintetizar los criterios para el planteamiento de una posible adicción al internet de la siguiente manera:
 
@@ -130,14 +131,14 @@ Por lo cual es posible sintetizar los criterios para el planteamiento de una pos
 Esta condición es sencilla de medir ya que bastaría con supervisar la cantidad de tiempo de uso del internet, sin embargo, son las siguientes condiciones las que dificultan un poco más la medición.  
 
 \subsection{Caracterización del uso inadecuado del internet como una adicción}
-De acuerdo a la literatura, \citep{griffithsbehavioural} las adicciones de abuso de sustancias y las comportamentales como es el caso del uso indebido del internet visto como una adicción, deben evaluarse por sus similitudes y no por sus diferencias, es decir las modificaciones comportamentales de las adicciones típicas pueden existir en una posible adicción al internet. De esta manera es posible clasificar la posible existencia de una adicción observando criterios fácilmente medibles como los cambios de comportamiento, buscando modificaciones descritas en la seccion 3.1.
+De acuerdo a la literatura, \citep{griffithsbehavioural} las adicciones de abuso de sustancias y las comportamentales como es el caso del uso indebido del internet visto como una adicción, deben evaluarse por sus similitudes y no por sus diferencias, es decir las modificaciones comportamentales de las adicciones típicas pueden existir en una posible adicción al internet. De esta manera es posible clasificar la posible existencia de una adicción observando criterios fácilmente medibles como los cambios de comportamiento, buscando modificaciones descritas en la sección 3.1.
 
 
 \newpage
 \section{Análisis del problema: árbol del problema}
-Sintetizando la información de fácil medición y la problemática descrita de la adicción al internet en niños y adolescentes, se plantea que el análisis clínico para la población completa es de poca viabilidad debido a la extención y al requirimiento de personal calificado en el tema. Por ello ofrecemos el siguiente árbol donde se describen las consecuencias sobre la población así como tambien una breve noción del impacto sobre el tipo población.
+Sintetizando la información de fácil medición y la problemática descrita de la adicción al internet en niños y adolescentes, se plantea que el análisis clínico para la población completa es de poca viabilidad debido a la extensión y al requerimiento de personal calificado en el tema. Por ello ofrecemos el siguiente árbol donde se describen las consecuencias sobre la población así como también una breve noción del impacto sobre el tipo de población.
 
-De acuerdo al árbol del problema se evidencia la necesidad de una herramienta preliminar para dirigir adecuadamente los recursos y lograr una mejor proporsión de diagnósticos. Reduciendo el número de casos no diagnosticados y permitiendo activar los protocolos donde se requieran.
+De acuerdo al árbol del problema se evidencia la necesidad de una herramienta preliminar para dirigir adecuadamente los recursos y lograr una mejor proporción de diagnósticos. Reduciendo el número de casos no diagnosticados y permitiendo activar los protocolos donde se requieran.
 
 
 
@@ -147,7 +148,7 @@ De acuerdo al árbol del problema se evidencia la necesidad de una herramienta p
 \begin{landscape}
 \thispagestyle{empty}
 \begin{center}
-{\large\bfseries Arbol de problemas}\\[4pt]
+{\large\bfseries Árbol de problemas}\\[4pt]
 
 \vfill
 \begin{center} % LINEA PARA CENTRAR EL ARBOL
@@ -158,25 +159,25 @@ De acuerdo al árbol del problema se evidencia la necesidad de una herramienta p
  
 % ----- Problema central -----
 \node[problema] (P) {PROBLEMA CENTRAL\\[3pt]
-\normalfont\small Deteccion tardia del uso problematico de internet (UPI) en ninos y adolescentes,
-porque su medicion depende de evaluaciones clinicas complejas y poco accesibles, y no se
-aprovechan indicadores fisicos de bajo costo como senal temprana.};
+\normalfont\small Detección tardía del uso problemático de internet (UPI) en niños y adolescentes,
+porque su medición depende de evaluaciones clínicas complejas y poco accesibles, y no se
+aprovechan indicadores físicos de bajo costo como señal temprana.};
  
 % ----- Efectos directos -----
 \node[efecto, above=1.0cm of P.north west, anchor=south west, xshift=0.1cm] (E1)
-  {\textcolor{efecto}{\textbf{E1. Intervencion tardia}}
+  {\textcolor{efecto}{\textbf{E1. Intervención tardía}}
    \begin{itemize}
-     \item Habitos digitales nocivos se consolidan antes de detectarse
-     \item Se actua cuando ya hay sintomas clinicos
+     \item Hábitos digitales nocivos se consolidan antes de detectarse
+     \item Se actúa cuando ya hay síntomas clínicos
    \end{itemize}};
 \node[efecto, right=of E1.north east, anchor=north west] (E2)
   {\textcolor{efecto}{\textbf{E2. Deterioro de la salud mental}}
    \begin{itemize}
-     \item Mayor prevalencia de depresion y ansiedad
-     \item Alteraciones del sueno
+     \item Mayor prevalencia de depresión y ansiedad
+     \item Alteraciones del sueño
    \end{itemize}};
 \node[efecto, right=of E2.north east, anchor=north west] (E3)
-  {\textcolor{efecto}{\textbf{E3. Deterioro de la salud fisica}}
+  {\textcolor{efecto}{\textbf{E3. Deterioro de la salud física}}
    \begin{itemize}
      \item Sedentarismo, mala postura, dieta irregular
      \item Menor aptitud cardiovascular
@@ -184,45 +185,45 @@ aprovechan indicadores fisicos de bajo costo como senal temprana.};
 \node[efecto, right=of E3.north east, anchor=north west] (E4)
   {\textcolor{efecto}{\textbf{E4. Casos subdiagnosticados}}
    \begin{itemize}
-     \item UPI invisible detras de otros diagnosticos
-     \item Sin linea base de prevalencia real
+     \item UPI invisible detrás de otros diagnósticos
+     \item Sin línea base de prevalencia real
    \end{itemize}};
  
 % ----- Efectos secundarios -----
 \node[efsec, above=0.9cm of E1.north west, anchor=south west, xshift=0cm] (S1)
-  {\textbf{Mayores costos} para familias y sistema de salud; politicas publicas sin datos para focalizar};
+  {\textbf{Mayores costos} para familias y sistema de salud; políticas publicas sin datos para focalizar};
 \node[efsec, right=0.4cm of S1.north east, anchor=north west] (S2)
-  {\textbf{Bajo desempeno escolar y social}: menor funcionamiento global (CGAS), aislamiento};
+  {\textbf{Bajo desempeño escolar y social}: menor funcionamiento global (CGAS), aislamiento};
 \node[efsec, right=0.4cm of S2.north east, anchor=north west] (S3)
-  {\textbf{Mas inequidad}: familias sin acceso a especialistas quedan sin diagnostico};
+  {\textbf{Más inequidad}: familias sin acceso a especialistas quedan sin diagnóstico};
  
 % ----- Causas -----
 \node[causa, below=1.0cm of P.south west, anchor=north west, xshift=0.1cm] (C1)
-  {\textcolor{causa}{\textbf{C1. Dependencia de evaluaciones clinicas especializadas}}
+  {\textcolor{causa}{\textbf{C1. Dependencia de evaluaciones clínicas especializadas}}
    \begin{itemize}
-     \item PCIAT (20 items) requiere aplicacion profesional
+     \item PCIAT (20 ítems) requiere aplicación profesional
      \item Escasez de especialistas en salud mental infantil
-     \item Barreras de acceso, culturales y linguisticas
+     \item Barreras de acceso, culturales y lingüísticas
    \end{itemize}};
 \node[causa, right=of C1.north east, anchor=north west] (C2)
   {\textcolor{causa}{\textbf{C2. El UPI no se mide directamente}}
    \begin{itemize}
-     \item Se infiere por sus consecuencias (depresion, ansiedad)
-     \item Sin tamizaje en colegios ni atencion primaria
-     \item Baja conciencia de padres sobre senales de alerta
+     \item Se infiere por sus consecuencias (depresión, ansiedad)
+     \item Sin tamizaje en colegios ni atención primaria
+     \item Baja conciencia de padres sobre señales de alerta
    \end{itemize}};
 \node[causa, right=of C2.north east, anchor=north west] (C3)
-  {\textcolor{causa}{\textbf{C3. Subutilizacion de indicadores fisicos accesibles}}
+  {\textcolor{causa}{\textbf{C3. Subutilización de indicadores físicos accesibles}}
    \begin{itemize}
-     \item FitnessGram, bioimpedancia y actigrafia no se conectan con la salud digital
-     \item No hay modelos que relacionen actividad, sueno y composicion corporal con el UPI
+     \item FitnessGram, bioimpedancia y actigrafía no se conectan con la salud digital
+     \item No hay modelos que relacionen actividad, sueño y composición corporal con el UPI
    \end{itemize}};
 \node[causa, right=of C3.north east, anchor=north west] (C4)
-  {\textcolor{causa}{\textbf{C4. Datos incompletos y heterogeneos}}
+  {\textcolor{causa}{\textbf{C4. Datos incompletos y heterogéneos}}
    \begin{itemize}
      \item Muchas mediciones faltantes
      \item sii ausente en parte del entrenamiento
-     \item Actigrafia solo en un subconjunto (parquet vs csv)
+     \item Actigrafía solo en un subconjunto (parquet vs csv)
      \item Clases desbalanceadas
    \end{itemize}};
  
